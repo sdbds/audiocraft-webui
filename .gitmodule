@@ -1,0 +1,3 @@
+[submodule "audiocraft"]
+	path = audiocraft
+	url = https://github.com/sdbds/audiocraft

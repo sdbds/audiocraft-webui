@@ -1,0 +1,7 @@
+.vs
+.idea
+
+venv
+__pycache__
+
+huggingface
