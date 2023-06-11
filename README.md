@@ -19,13 +19,17 @@
 
 ### Clone repo with submodules
 1、
-```sh
+```
 git clone --recurse-submodules https://github.com/sdbds/audiocraft-webui/
 ```
 
 OR
 
-1、Download code zip from Relese.
+1、Download code zip from Release.
+2、
+```
+git submodule update --recursive --init
+```
 
 ### Required Dependencies
 
