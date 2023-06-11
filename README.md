@@ -25,7 +25,8 @@ git clone --recurse-submodules https://github.com/sdbds/audiocraft-webui/
 
 OR
 
-1、Download code zip from Release.
+1、Download code zip from Release. 
+
 2、
 ```
 git submodule update --recursive --init
