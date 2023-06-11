@@ -11,7 +11,9 @@
 git clone --recurse-submodules https://github.com/sdbds/audiocraft-webui/
 ```
 
-2、Download code zip from Relese.
+OR
+
+1、Download code zip from Relese.
 
 ### Required Dependencies
 
