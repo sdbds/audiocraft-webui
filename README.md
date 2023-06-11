@@ -3,6 +3,16 @@
 
 ****
 
+##Main Repo
+https://github.com/facebookresearch/audiocraft
+https://huggingface.co/spaces/facebook/MusicGen/tree/main
+
+##Page
+https://ai.honu.io/papers/musicgen/
+
+##Paper
+https://arxiv.org/abs/2306.05284
+
 ## Usage
 
 ### Clone repo with submodules
