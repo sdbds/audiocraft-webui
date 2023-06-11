@@ -3,15 +3,16 @@
 
 ****
 
-##Main Repo
-https://github.com/facebookresearch/audiocraft
-https://huggingface.co/spaces/facebook/MusicGen/tree/main
+## Main Repo 
 
-##Page
-https://ai.honu.io/papers/musicgen/
+[https://github.com/facebookresearch/audiocraft](https://github.com/facebookresearch/audiocraft)
+[https://huggingface.co/spaces/facebook/MusicGen/tree/main ](https://huggingface.co/spaces/facebook/MusicGen/tree/main)
 
-##Paper
-https://arxiv.org/abs/2306.05284
+## Page
+[https://ai.honu.io/papers/musicgen/ ](https://ai.honu.io/papers/musicgen/)
+
+## Paper 
+[https://arxiv.org/abs/2306.05284](https://arxiv.org/abs/2306.05284)
 
 ## Usage
 
