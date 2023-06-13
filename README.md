@@ -44,7 +44,7 @@ Run `install.ps1` will automaticilly create a venv for you and install necessary
 
 #### RUN_GUI
 
-Run `webui.ps1` or `webui_batch.ps1` will get a address,open browser with it.
+Run `webui.ps1` will get a address,open browser with it.
 
 ## License
 

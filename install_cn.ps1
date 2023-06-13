@@ -49,11 +49,16 @@ if (!(Test-Path -Path "venv")) {
 Check "激活虚拟环境失败。"
 
 Write-Output "安装程序所需依赖 (已进行国内加速，若在国外或无法使用加速源请换用 install.ps1 脚本)"
-$install_torch = Read-Host "是否需要安装 Torch+xformers? [y/n] (默认为 y)"
-if ($install_torch -eq "y" -or $install_torch -eq "Y" -or $install_torch -eq ""){
+$install_torch = Read-Host "是否需要安装 Torch+xformers? 1为2.0.1稳定版+cu118xformers稳定版,2为2.1开发版+cu121+xformers开发版(无法加速)。 [1/2/n] (默认为 1)"
+if ($install_torch -ieq "1" -or $install_torch -eq ""){
     pip install torchaudio==2.0.2+cu118 torch==2.0.1+cu118 -f https://mirror.sjtu.edu.cn/pytorch-wheels/torch_stable.html -i https://mirror.baidu.com/pypi/simple
     Check "torch 安装失败，请删除 venv 文件夹后重新运行。"
     pip install -U -I --no-deps xformers==0.0.20 -i https://mirror.baidu.com/pypi/simple
+    Check "xformers 安装失败。"
+}elseif ($install_torch -ieq "2") {
+    pip install -U --pre torch==2.1.0.dev20230613+cu121 torchaudio==2.1.0.dev20230613+cu121 --index-url https://download.pytorch.org/whl/nightly/cu121
+    Check "torch 安装失败，请删除 venv 文件夹后重新运行。"
+    pip install -U -I --pre --no-deps xformers
     Check "xformers 安装失败。"
 }
 
