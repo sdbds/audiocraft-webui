@@ -38,6 +38,8 @@ git submodule update --recursive --init
 - Git
 - Install [ffmpeg](https://ffmpeg.org/) for your operating system
   (https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/)
+  
+  notice:step 4 use windows system Set Enviroment Path.
 
 ### Windows
 
