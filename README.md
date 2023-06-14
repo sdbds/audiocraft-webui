@@ -34,7 +34,10 @@ git submodule update --recursive --init
 
 ### Required Dependencies
 
-Python over 3.10.8 and Git
+- Python over 3.10.8
+- Git
+- Install [ffmpeg](https://ffmpeg.org/) for your operating system
+  (https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/)
 
 ### Windows
 
