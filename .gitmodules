@@ -1,3 +1,6 @@
 [submodule "audiocraft"]
 	path = audiocraft
 	url = https://github.com/sdbds/audiocraft
+[submodule "musicgen_trainer"]
+	path = musicgen_trainer
+	url = https://github.com/sdbds/musicgen_trainer
