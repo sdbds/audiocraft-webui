@@ -51,6 +51,10 @@ Run `install.ps1` will automaticilly create a venv for you and install necessary
 
 Run `webui.ps1` will get a address,open browser with it.
 
+Run `extend.ps1` will Open Extend branch by @Oncorporation
+
+it is powerful
+
 ## License
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
