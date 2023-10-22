@@ -9,7 +9,10 @@ sentencepiece
 spacy==3.5.2
 huggingface_hub
 tqdm
-transformers
+transformers>=4.31.0  # need Encodec there.
 demucs
 librosa
 gradio
+torchmetrics
+encodec
+protobuf

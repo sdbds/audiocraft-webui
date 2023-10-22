@@ -5,4 +5,4 @@ Set-Location .\audiocraft
 $Env:HF_HOME = "../huggingface"
 $Env:XFORMERS_FORCE_DISABLE_TRITON = "1"
 
-python.exe app.py $args
+python.exe demos./musicgen_app.py $args
