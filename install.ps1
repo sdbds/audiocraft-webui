@@ -20,24 +20,24 @@ function Check {
     }
 }
 
-# Check whether Pylauncher is installed
-$list = (py --list 2> $null)
-if(!$?){
-    InstallFail
-}
+# # Check whether Pylauncher is installed
+# $list = (py --list 2> $null)
+# if(!$?){
+#     InstallFail
+# }
 
-# Check minor version of Python
-$requiredMinorVersion = "3\.10"
-if(!($list -match $requiredMinorVersion)){
-    Check "Python 3.10 is not found. Please install Python 3.10.x later than 3.10.8"
-}
+# # Check minor version of Python
+# $requiredMinorVersion = "3\.10"
+# if(!($list -match $requiredMinorVersion)){
+#     Check "Python 3.10 is not found. Please install Python 3.10.x later than 3.10.8"
+# }
 
-# Check micro version of Python
-$requiredMicroVersion = "3\.10\.(8|9|([1-7]\d))"
-$pyVersion = py -3.10 --version
-if(!($pyVersion -match $requiredMicroVersion)){
-    Check "Installed Python 3.10 is too old to install layerdivider. Please upgrade your Python 3.10"
-}
+# # Check micro version of Python
+# $requiredMicroVersion = "3\.10\.(8|9|([1-7]\d))"
+# $pyVersion = py -3.10 --version
+# if(!($pyVersion -match $requiredMicroVersion)){
+#     Check "Installed Python 3.10 is too old to install layerdivider. Please upgrade your Python 3.10"
+# }
 
 if (!(Test-Path -Path "venv")) {
     Write-Output "creating venv..."
@@ -49,6 +49,8 @@ if (!(Test-Path -Path "venv")) {
 Check "activate venv failed"
 
 Write-Output "Installing requirement"
+
+pip install -e audiocraft/.
 
 $install_torch = Read-Host "Need install Torch+xformers? [1] for 2.1+cu118+xformers0.0.23,[2] for 2.1+cu121+xformers0.0.23dev [1/2/n] (first use/default [1])"
 if ($install_torch -ieq "1" -or $install_torch -eq ""){
