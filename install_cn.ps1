@@ -58,9 +58,9 @@ if ($install_torch -ieq "1" -or $install_torch -eq ""){
     pip install -U -I --pre --no-deps xformers -i https://mirror.baidu.com/pypi/simple
     Check "xformers 安装失败。"
 }elseif ($install_torch -ieq "2") {
-    pip install -U --pre torch==2.1.0+cu121 torchaudio==2.1.0+cu121 -f https://mirror.sjtu.edu.cn/pytorch-wheels/torch_stable.html -i https://mirror.baidu.com/pypi/simple
+    pip install -U --pre torch==2.1.1+cu121 torchaudio==2.1.1+cu121 -f https://mirror.sjtu.edu.cn/pytorch-wheels/torch_stable.html -i https://mirror.baidu.com/pypi/simple
     Check "torch 安装失败，请删除 venv 文件夹后重新运行。"
-    pip install -U -I --pre --no-deps xformers -i https://mirror.baidu.com/pypi/simple
+    pip install -U -I --pre --no-deps xformers==0.0.23 -i https://mirror.baidu.com/pypi/simple
     Check "xformers 安装失败。"
 }
 
