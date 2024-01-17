@@ -52,21 +52,18 @@ Write-Output "Installing requirement"
 
 pip install -e audiocraft/.
 
-$install_torch = Read-Host "Need install Torch+xformers? [1] for 2.1+cu118+xformers0.0.23,[2] for 2.1.1+cu121+xformers0.0.23 [1/2/n] (first use/default [1])"
+$install_torch = Read-Host "Need install Torch+xformers? [1] for 2.1.0+cu121+xformers0.0.23,[2] for 2.1.1+cu121+xformers0.0.23 [1/2/n] (first use/default [1])"
 if ($install_torch -ieq "1" -or $install_torch -eq ""){
-    pip install torchaudio==2.1.0+cu118 torch==2.1.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+    pip install torchaudio==2.1.1+cu121 torch==2.1.1+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
+    Check "torch install failed，please delete venv dir and rerun"
+    pip install -U -I --no-deps xformers==0.0.23
+    Check "xformers install failed"
+}elseif ($install_torch -ieq "2") {
+    pip install -U --pre torch==2.1.2+cu121 torchaudio==2.1.2+cu121 --index-url https://download.pytorch.org/whl/nightly/cu121
     Check "torch install failed，please delete venv dir and rerun"
     pip install -U -I --pre --no-deps xformers
     Check "xformers install failed"
-}elseif ($install_torch -ieq "2") {
-    pip install -U --pre torch==2.1.1+cu121 torchaudio==2.1.1+cu121 --index-url https://download.pytorch.org/whl/nightly/cu121
-    Check "torch install failed，please delete venv dir and rerun"
-    pip install -U -I --pre --no-deps xformers==0.0.23
-    Check "xformers install failed"
 }
-
-pip install --upgrade -r requirements.txt -i https://pypi.org/simple
-Check "Install requirement failed"
 
 Write-Output "Install Finished"
 Read-Host | Out-Null ;
